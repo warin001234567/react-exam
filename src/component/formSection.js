@@ -153,6 +153,7 @@ const FormSection = (props) => {
       if (isValid) {
         dispatch(addDataToState(resultData));
         setUserData(initialState);
+        props.setEditData(null);
       }
     } else {
       let resultData = userData;
@@ -163,9 +164,9 @@ const FormSection = (props) => {
         dispatch(updateData(userData));
         setUserData(initialState);
         setEditMode(false);
+        props.setEditData(null);
       }
     }
-    props.setEditData(null);
   };
 
   useEffect(() => {
