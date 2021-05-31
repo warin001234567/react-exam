@@ -2,7 +2,6 @@ import Select from "react-select";
 import SelectorOption from "./selectorOption";
 
 const MobileSelector = (props) => {
-  console.log("MobileSelector", props.value);
   return (
     <div className="flex flex-col w-32">
       <Select

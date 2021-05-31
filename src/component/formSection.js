@@ -103,7 +103,7 @@ const FormSection = (props) => {
       countError++;
       setPassportNoError("Incorect Passport No.");
     }
-    if (userData.citizenId.length > 0 && userData.citizenId.length < 13) {
+    if (userData.citizenId.length > 0 && userData.citizenId.length < 17) {
       countError++;
       setCitizenIdError("Please complete CitizenId");
     }

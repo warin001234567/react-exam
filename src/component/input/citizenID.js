@@ -10,12 +10,10 @@ const CitizenID = (props) => {
   const input3 = useRef();
   const input4 = useRef();
   const input5 = useRef();
-  console.log(props.value);
 
   const onChangeHandler = (event) => {
     const { maxLength, value, name } = event.target;
     const [fieldName, fieldIndex] = name.split("-");
-    console.log(fieldName);
     switch (fieldIndex) {
       case "1":
         setFirstInput(value);
@@ -61,12 +59,10 @@ const CitizenID = (props) => {
       input4.current.value +
       "-" +
       input5.current.value;
-    console.log(data);
     props.onChange(data, props.inputName);
   };
 
   useEffect(() => {
-    console.log(props.value);
     const [temp1, temp2, temp3, temp4, temp5] = props.value.split("-");
     setFirstInput(temp1 ? temp1 : "");
     setSecondInput(temp2 ? temp2 : "");

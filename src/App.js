@@ -55,7 +55,6 @@ function App() {
   };
 
   const getAllPage = () => {
-    console.log("user.length", Math.ceil(user.length / 5));
     let temp = [];
     for (let i = 0; i < Math.ceil(user.length / 5); i++) {
       temp.push(
@@ -114,7 +113,6 @@ function App() {
   }, [user]);
 
   useEffect(() => {
-    console.log(currentPage);
     setUserList(user.slice((currentPage - 1) * 5, currentPage * 5));
     getAllPage();
   }, [currentPage]);
@@ -210,7 +208,7 @@ function App() {
           </div>
           {/* Table */}
           <div className="mt-5 overflow-hidden">
-            <table className="w-full table-auto">
+            <table className="w-full ">
               <thead>
                 <tr className="border border-black">
                   <th className="text-left pl-5">Name</th>
@@ -220,7 +218,7 @@ function App() {
                   <th></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="border border-black">
                 {userList.map((item) => {
                   return (
                     <tr
